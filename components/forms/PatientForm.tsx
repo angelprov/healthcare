@@ -32,7 +32,7 @@ const PatientForm = () => {
       email: "",
       phone: "",
     },
-  })
+  });
  
   async function onSubmit({ name, email, phone}: z.infer<typeof UserFormValidation>) {
     setIsLoading(true);
@@ -48,7 +48,7 @@ const PatientForm = () => {
         console.log(error);
     }
     setIsLoading(false);
-  }
+  };
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6 flex-1">
@@ -87,6 +87,6 @@ const PatientForm = () => {
       </form>
     </Form>
   )
-}
+};
 
 export default PatientForm
